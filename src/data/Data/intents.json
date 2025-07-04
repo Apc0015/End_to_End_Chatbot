@@ -1,0 +1,345 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "Good afternoon",
+        "How are you",
+        "What's up",
+        "Howdy",
+        "Greetings",
+        "Hi there",
+        "Hello there"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?",
+        "Hey! How are you doing?",
+        "Hello! I'm here to assist you.",
+        "Hi! What brings you here today?",
+        "Hello! Ready to chat?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Take care",
+        "Talk to you later",
+        "I have to go",
+        "Till next time",
+        "Catch you later",
+        "Farewell",
+        "See ya",
+        "Later"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Take care!",
+        "Farewell! It was nice talking to you.",
+        "Bye! Come back anytime!",
+        "Take care! See you soon!",
+        "Goodbye! Thanks for chatting!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks a lot",
+        "Thank you so much",
+        "I appreciate it",
+        "Thanks for the help",
+        "Thank you for your assistance",
+        "Great, thanks",
+        "Perfect, thank you"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "My pleasure!",
+        "Anytime!",
+        "Glad I could assist you!",
+        "You're very welcome!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "What are you",
+        "Who are you",
+        "What do you do",
+        "Tell me about yourself",
+        "What is your purpose",
+        "What can you do",
+        "How can you help me",
+        "What are your capabilities",
+        "About you",
+        "Your information"
+      ],
+      "responses": [
+        "I'm an AI chatbot designed to help you with various tasks and answer your questions.",
+        "I'm a conversational AI assistant here to help you with information and support.",
+        "I'm an intelligent chatbot that can assist you with a wide range of topics.",
+        "I'm your virtual assistant, ready to help with questions and tasks.",
+        "I'm an AI-powered chatbot created to provide helpful information and assistance."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "What's the weather like",
+        "How's the weather",
+        "Weather forecast",
+        "Is it raining",
+        "Will it rain today",
+        "Temperature today",
+        "Weather update",
+        "Climate today",
+        "Is it sunny",
+        "Weather report"
+      ],
+      "responses": [
+        "I don't have access to real-time weather data, but I'd recommend checking a weather app or website for current conditions.",
+        "For accurate weather information, please check your local weather service or a weather app.",
+        "I can't provide current weather data, but weather.com or your phone's weather app would have the latest forecast.",
+        "I don't have weather capabilities, but I suggest checking a reliable weather source for current conditions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help",
+        "I need help",
+        "Can you help me",
+        "What can you do",
+        "How does this work",
+        "I'm confused",
+        "I don't understand",
+        "Assist me",
+        "Support",
+        "Guide me"
+      ],
+      "responses": [
+        "I'm here to help! You can ask me questions, request information, or just have a conversation.",
+        "I can assist you with various topics. What specific help do you need?",
+        "I'm ready to help! Feel free to ask me anything you'd like to know.",
+        "I can help with questions, provide information, and have conversations. What would you like to know?",
+        "I'm here to assist! Just ask me about any topic you're curious about."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "What's your name",
+        "What is your name",
+        "What should I call you",
+        "Do you have a name",
+        "What are you called",
+        "Your name",
+        "Tell me your name",
+        "How should I address you",
+        "What do people call you"
+      ],
+      "responses": [
+        "I'm Smart ChatBot, your AI assistant!",
+        "You can call me Smart ChatBot.",
+        "I'm Smart ChatBot, nice to meet you!",
+        "My name is Smart ChatBot. What's yours?",
+        "I go by Smart ChatBot. How can I help you today?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "age",
+      "patterns": [
+        "How old are you",
+        "What's your age",
+        "When were you created",
+        "How long have you existed",
+        "When were you born",
+        "Your age",
+        "How old",
+        "When did you start"
+      ],
+      "responses": [
+        "I don't have an age in the traditional sense. I was created recently as an AI assistant.",
+        "As an AI, I don't age like humans do. I was recently developed to help users like you.",
+        "I'm a newly created AI, so I don't have an age in years like humans do.",
+        "I exist in the digital realm, so age doesn't apply to me in the usual way.",
+        "I was recently brought to life as an AI assistant, so I'm quite new!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you",
+        "Where do you live",
+        "Your location",
+        "Where are you from",
+        "Where are you located",
+        "What's your location",
+        "Are you local",
+        "Where do you exist"
+      ],
+      "responses": [
+        "I exist in the digital world, so I don't have a physical location.",
+        "I'm everywhere and nowhere - I exist in the cloud!",
+        "I don't have a physical location since I'm an AI assistant.",
+        "I live in the digital realm, accessible from anywhere with an internet connection.",
+        "As an AI, I exist in cyberspace rather than any specific physical location."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What time is it",
+        "Current time",
+        "Tell me the time",
+        "What's the time",
+        "Time now",
+        "Clock",
+        "What time",
+        "Time please"
+      ],
+      "responses": [
+        "I don't have access to real-time data, but you can check the time on your device or ask your system.",
+        "I can't provide the current time, but it should be displayed on your computer or phone.",
+        "I don't have clock capabilities, but your device should show the current time.",
+        "For the current time, please check your device's clock or system time."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "booking",
+      "patterns": [
+        "I want to book",
+        "Can I make a reservation",
+        "Book a table",
+        "Reserve a room",
+        "Make an appointment",
+        "Schedule a meeting",
+        "Book a flight",
+        "Hotel booking",
+        "Restaurant reservation",
+        "Appointment booking"
+      ],
+      "responses": [
+        "I can't directly make bookings, but I can guide you on how to make reservations through appropriate channels.",
+        "For bookings, you'll need to contact the relevant service provider directly or use their booking system.",
+        "I can provide information about booking processes, but you'll need to make actual reservations through official channels.",
+        "I can't make bookings for you, but I can help you find the right contact information or booking platforms."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "I have a complaint",
+        "I'm not satisfied",
+        "This is not working",
+        "I have a problem",
+        "Something is wrong",
+        "I'm frustrated",
+        "This doesn't work",
+        "I need to complain",
+        "Issue with service",
+        "Problem with product"
+      ],
+      "responses": [
+        "I'm sorry to hear you're having trouble. Can you tell me more about the issue so I can try to help?",
+        "I understand your frustration. Let me see how I can assist you with this problem.",
+        "I'm here to help resolve your concern. Could you provide more details about what's not working?",
+        "I apologize for any inconvenience. Please let me know what specific issue you're experiencing.",
+        "I want to help you with this problem. Can you describe what's happening in more detail?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "product_info",
+      "patterns": [
+        "Tell me about your products",
+        "What products do you have",
+        "Product information",
+        "What do you sell",
+        "Product details",
+        "What's available",
+        "Show me products",
+        "Product catalog",
+        "What can I buy",
+        "Product features"
+      ],
+      "responses": [
+        "I'm a chatbot service rather than a product seller. I can provide information and assistance with various topics.",
+        "I don't sell physical products, but I can help you with information, conversations, and answering questions.",
+        "My main 'product' is conversational assistance. I can help with questions, provide information, and chat with you.",
+        "I offer conversational AI services. I can answer questions, provide information, and assist with various topics.",
+        "I'm an AI assistant service. I can help with information, answer questions, and provide conversational support."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "price_inquiry",
+      "patterns": [
+        "How much does it cost",
+        "What's the price",
+        "Pricing information",
+        "Cost details",
+        "How much",
+        "Price list",
+        "Pricing",
+        "What does it cost",
+        "Rates",
+        "Fees"
+      ],
+      "responses": [
+        "I'm a free AI assistant, so there's no cost to chat with me!",
+        "My services are provided at no charge. Feel free to ask me anything!",
+        "I'm free to use! No pricing or fees involved in our conversation.",
+        "There's no cost associated with using my services. I'm here to help for free!",
+        "I don't charge anything for my assistance. It's completely free to chat with me!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [
+        "I don't know",
+        "I'm not sure",
+        "Maybe",
+        "I don't understand",
+        "What do you mean",
+        "Can you explain",
+        "I'm confused",
+        "That's unclear",
+        "I don't get it",
+        "Clarify please"
+      ],
+      "responses": [
+        "I understand you're unsure. Can you ask me a more specific question?",
+        "No problem! Feel free to ask me anything you'd like to know more about.",
+        "That's okay! Is there something specific I can help clarify for you?",
+        "I'm here to help explain things. What would you like to know more about?",
+        "No worries! Ask me any question and I'll do my best to help."
+      ],
+      "context": [""]
+    }
+  ]
+}
