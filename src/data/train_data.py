@@ -8,7 +8,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.utils import to_categorical
 import pickle
 from pathlib import Path
 

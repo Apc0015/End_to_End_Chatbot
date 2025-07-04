@@ -3,16 +3,12 @@ import pickle
 import random
 import os
 from pathlib import Path
-import sys
-sys.path.append(str(Path(__file__).parent.parent))
-from data.train_data import DataPreprocessor
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 
 class Chatbot:
     def __init__(self):
-        self.preprocessor = DataPreprocessor()
         self.model = None
         self.intents = None
         self.responses = {}
