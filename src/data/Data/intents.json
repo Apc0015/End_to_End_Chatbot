@@ -14,7 +14,13 @@
         "Howdy",
         "Greetings",
         "Hi there",
-        "Hello there"
+        "Hello there",
+        "Good day",
+        "How do you do?",
+        "Nice to meet you",
+        "Pleased to meet you",
+        "Are you there?",
+        "Anyone home?"
       ],
       "responses": [
         "Hello! How can I help you today?",
@@ -22,7 +28,10 @@
         "Hey! How are you doing?",
         "Hello! I'm here to assist you.",
         "Hi! What brings you here today?",
-        "Hello! Ready to chat?"
+        "Hello! Ready to chat?",
+        "Greetings! How may I be of service?",
+        "Pleased to connect! How can I assist?",
+        "Hi! What's on your mind?"
       ],
       "context": [""]
     },
@@ -39,7 +48,10 @@
         "Catch you later",
         "Farewell",
         "See ya",
-        "Later"
+        "Later",
+        "Adios",
+        "So long",
+        "I'm out"
       ],
       "responses": [
         "Goodbye! Have a great day!",
@@ -47,7 +59,10 @@
         "Farewell! It was nice talking to you.",
         "Bye! Come back anytime!",
         "Take care! See you soon!",
-        "Goodbye! Thanks for chatting!"
+        "Goodbye! Thanks for chatting!",
+        "Cheerio! Until next time.",
+        "Leaving so soon? Hope to see you again!",
+        "So long! Happy to help anytime."
       ],
       "context": [""]
     },
@@ -63,7 +78,11 @@
         "Thanks for the help",
         "Thank you for your assistance",
         "Great, thanks",
-        "Perfect, thank you"
+        "Perfect, thank you",
+        "Much appreciated",
+        "Thanks a bunch",
+        "You're the best",
+        "That was useful"
       ],
       "responses": [
         "You're welcome!",
@@ -71,7 +90,10 @@
         "My pleasure!",
         "Anytime!",
         "Glad I could assist you!",
-        "You're very welcome!"
+        "You're very welcome!",
+        "No problem at all!",
+        "Glad to be of service!",
+        "Don't mention it!"
       ],
       "context": [""]
     },
@@ -87,14 +109,20 @@
         "How can you help me",
         "What are your capabilities",
         "About you",
-        "Your information"
+        "Your information",
+        "Describe yourself",
+        "Your function",
+        "What's your role?"
       ],
       "responses": [
         "I'm an AI chatbot designed to help you with various tasks and answer your questions.",
         "I'm a conversational AI assistant here to help you with information and support.",
         "I'm an intelligent chatbot that can assist you with a wide range of topics.",
         "I'm your virtual assistant, ready to help with questions and tasks.",
-        "I'm an AI-powered chatbot created to provide helpful information and assistance."
+        "I'm an AI-powered chatbot created to provide helpful information and assistance.",
+        "I am a digital assistant here to make your life easier.",
+        "Think of me as your personal AI helper.",
+        "My purpose is to engage in helpful conversations."
       ],
       "context": [""]
     },
@@ -110,13 +138,19 @@
         "Weather update",
         "Climate today",
         "Is it sunny",
-        "Weather report"
+        "Weather report",
+        "Current temperature",
+        "What's the humidity?",
+        "Any chance of snow?",
+        "What's the forecast for tomorrow?"
       ],
       "responses": [
         "I don't have access to real-time weather data, but I'd recommend checking a weather app or website for current conditions.",
         "For accurate weather information, please check your local weather service or a weather app.",
         "I can't provide current weather data, but weather.com or your phone's weather app would have the latest forecast.",
-        "I don't have weather capabilities, but I suggest checking a reliable weather source for current conditions."
+        "I don't have weather capabilities, but I suggest checking a reliable weather source for current conditions.",
+        "To get the latest weather, please use a dedicated weather application or website. I'm not connected to live weather feeds.",
+        "I can't tell you the weather directly, but you can find it on many online platforms."
       ],
       "context": [""]
     },
@@ -132,14 +166,20 @@
         "I don't understand",
         "Assist me",
         "Support",
-        "Guide me"
+        "Guide me",
+        "I need assistance",
+        "Show me options",
+        "What are my choices?",
+        "Can you guide me?"
       ],
       "responses": [
         "I'm here to help! You can ask me questions, request information, or just have a conversation.",
         "I can assist you with various topics. What specific help do you need?",
         "I'm ready to help! Feel free to ask me anything you'd like to know.",
         "I can help with questions, provide information, and have conversations. What would you like to know?",
-        "I'm here to assist! Just ask me about any topic you're curious about."
+        "I'm here to assist! Just ask me about any topic you're curious about.",
+        "How can I be of assistance?",
+        "What seems to be the problem? I'll do my best to help."
       ],
       "context": [""]
     },
@@ -154,14 +194,17 @@
         "Your name",
         "Tell me your name",
         "How should I address you",
-        "What do people call you"
+        "What do people call you",
+        "Who am I talking to?",
+        "Are you human?"
       ],
       "responses": [
         "I'm Smart ChatBot, your AI assistant!",
         "You can call me Smart ChatBot.",
         "I'm Smart ChatBot, nice to meet you!",
         "My name is Smart ChatBot. What's yours?",
-        "I go by Smart ChatBot. How can I help you today?"
+        "I go by Smart ChatBot. How can I help you today?",
+        "I am an artificial intelligence, and my designation is Smart ChatBot."
       ],
       "context": [""]
     },
@@ -175,14 +218,17 @@
         "When were you born",
         "Your age",
         "How old",
-        "When did you start"
+        "When did you start",
+        "What's your creation date?",
+        "Are you young or old?"
       ],
       "responses": [
         "I don't have an age in the traditional sense. I was created recently as an AI assistant.",
         "As an AI, I don't age like humans do. I was recently developed to help users like you.",
         "I'm a newly created AI, so I don't have an age in years like humans do.",
         "I exist in the digital realm, so age doesn't apply to me in the usual way.",
-        "I was recently brought to life as an AI assistant, so I'm quite new!"
+        "I was recently brought to life as an AI assistant, so I'm quite new!",
+        "My age is measured in lines of code and data processed, not years."
       ],
       "context": [""]
     },
@@ -196,14 +242,17 @@
         "Where are you located",
         "What's your location",
         "Are you local",
-        "Where do you exist"
+        "Where do you exist",
+        "Are you in a city?",
+        "Do you have an office?"
       ],
       "responses": [
         "I exist in the digital world, so I don't have a physical location.",
         "I'm everywhere and nowhere - I exist in the cloud!",
         "I don't have a physical location since I'm an AI assistant.",
         "I live in the digital realm, accessible from anywhere with an internet connection.",
-        "As an AI, I exist in cyberspace rather than any specific physical location."
+        "As an AI, I exist in cyberspace rather than any specific physical location.",
+        "You can reach me from anywhere with an internet connection, as I reside in the cloud."
       ],
       "context": [""]
     },
@@ -217,13 +266,16 @@
         "Time now",
         "Clock",
         "What time",
-        "Time please"
+        "Time please",
+        "What's the current hour?",
+        "Can you tell me the time?"
       ],
       "responses": [
         "I don't have access to real-time data, but you can check the time on your device or ask your system.",
         "I can't provide the current time, but it should be displayed on your computer or phone.",
         "I don't have clock capabilities, but your device should show the current time.",
-        "For the current time, please check your device's clock or system time."
+        "For the current time, please check your device's clock or system time.",
+        "My internal clock isn't synchronized to a specific timezone. Please refer to your device."
       ],
       "context": [""]
     },
@@ -239,13 +291,16 @@
         "Book a flight",
         "Hotel booking",
         "Restaurant reservation",
-        "Appointment booking"
+        "Appointment booking",
+        "I need to reserve",
+        "Can you help me book something?"
       ],
       "responses": [
         "I can't directly make bookings, but I can guide you on how to make reservations through appropriate channels.",
         "For bookings, you'll need to contact the relevant service provider directly or use their booking system.",
         "I can provide information about booking processes, but you'll need to make actual reservations through official channels.",
-        "I can't make bookings for you, but I can help you find the right contact information or booking platforms."
+        "I can't make bookings for you, but I can help you find the right contact information or booking platforms.",
+        "While I don't handle bookings myself, I can direct you to services that do."
       ],
       "context": [""]
     },
@@ -261,14 +316,18 @@
         "This doesn't work",
         "I need to complain",
         "Issue with service",
-        "Problem with product"
+        "Problem with product",
+        "I'm unhappy",
+        "I want to report an issue",
+        "This is unacceptable"
       ],
       "responses": [
         "I'm sorry to hear you're having trouble. Can you tell me more about the issue so I can try to help?",
         "I understand your frustration. Let me see how I can assist you with this problem.",
         "I'm here to help resolve your concern. Could you provide more details about what's not working?",
         "I apologize for any inconvenience. Please let me know what specific issue you're experiencing.",
-        "I want to help you with this problem. Can you describe what's happening in more detail?"
+        "I want to help you with this problem. Can you describe what's happening in more detail?",
+        "I'm sorry for the inconvenience. Please elaborate on what's bothering you."
       ],
       "context": [""]
     },
@@ -284,14 +343,17 @@
         "Show me products",
         "Product catalog",
         "What can I buy",
-        "Product features"
+        "Product features",
+        "List your services",
+        "What do you offer?"
       ],
       "responses": [
         "I'm a chatbot service rather than a product seller. I can provide information and assistance with various topics.",
         "I don't sell physical products, but I can help you with information, conversations, and answering questions.",
         "My main 'product' is conversational assistance. I can help with questions, provide information, and chat with you.",
         "I offer conversational AI services. I can answer questions, provide information, and assist with various topics.",
-        "I'm an AI assistant service. I can help with information, answer questions, and provide conversational support."
+        "I'm an AI assistant service. I can help with information, answer questions, and provide conversational support.",
+        "I specialize in providing information and support through conversation."
       ],
       "context": [""]
     },
@@ -307,14 +369,17 @@
         "Pricing",
         "What does it cost",
         "Rates",
-        "Fees"
+        "Fees",
+        "Are your services free?",
+        "Do I have to pay?"
       ],
       "responses": [
         "I'm a free AI assistant, so there's no cost to chat with me!",
         "My services are provided at no charge. Feel free to ask me anything!",
         "I'm free to use! No pricing or fees involved in our conversation.",
         "There's no cost associated with using my services. I'm here to help for free!",
-        "I don't charge anything for my assistance. It's completely free to chat with me!"
+        "I don't charge anything for my assistance. It's completely free to chat with me!",
+        "You can use me for free! I'm here to help without any charges."
       ],
       "context": [""]
     },
@@ -330,14 +395,129 @@
         "I'm confused",
         "That's unclear",
         "I don't get it",
-        "Clarify please"
+        "Clarify please",
+        "I don't follow",
+        "Could you rephrase that?",
+        "What was that again?",
+        "Huh?"
       ],
       "responses": [
         "I understand you're unsure. Can you ask me a more specific question?",
         "No problem! Feel free to ask me anything you'd like to know more about.",
         "That's okay! Is there something specific I can help clarify for you?",
         "I'm here to help explain things. What would you like to know more about?",
-        "No worries! Ask me any question and I'll do my best to help."
+        "No worries! Ask me any question and I'll do my best to help.",
+        "I apologize, I didn't quite catch that. Could you try phrasing it differently?",
+        "Perhaps I can help if you give me a little more detail?",
+        "I'm having trouble understanding. Can you tell me what you're trying to achieve?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "Where is my order?",
+        "What's the status of my order?",
+        "Track my package",
+        "Has my order shipped?",
+        "When will my delivery arrive?",
+        "Check order status",
+        "My order number is",
+        "Can I track order",
+        "Status of my recent purchase",
+        "Is my item on its way?",
+        "Find my shipment",
+        "Update on my order"
+      ],
+      "responses": [
+        "Please provide your order number so I can check the status for you.",
+        "To check your order status, I'll need your order number. Could you please provide it?",
+        "I can help with that! What's your order number?",
+        "Once you give me your order number, I can tell you its current status.",
+        "Sure, tell me your order number and I'll look it up.",
+        "I need your order ID to track it. What is it?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "delivery_info",
+      "patterns": [
+        "What are your delivery options?",
+        "How long does delivery take?",
+        "Do you offer express shipping?",
+        "What are the shipping costs?",
+        "Can I get next-day delivery?",
+        "International shipping",
+        "Delivery times",
+        "Shipping details",
+        "How do you ship items?"
+      ],
+      "responses": [
+        "Our standard delivery takes 3-5 business days. We also offer express options for an additional fee.",
+        "Shipping costs vary based on your location and the selected delivery speed. You can see the exact cost at checkout.",
+        "Yes, we offer express and next-day delivery options in select regions. Please check our shipping policy for details.",
+        "For international shipping, please refer to our website's shipping section, as rates and times differ by country.",
+        "Delivery details can be found on our shipping information page, or I can try to answer specific questions if you have them."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "developer",
+      "patterns": [
+        "Who created you?",
+        "Who is your developer?",
+        "Who made you?",
+        "Who programmed you?",
+        "Tell me about your creator.",
+        "What company made you?"
+      ],
+      "responses": [
+        "I was developed by a team of dedicated engineers and AI researchers.",
+        "My creators are constantly working to improve me.",
+        "I'm a product of human ingenuity and programming.",
+        "A team of developers brought me to life.",
+        "I was built by smart people who love technology!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "I want to give feedback",
+        "Do you have a feedback option?",
+        "How can I provide feedback?",
+        "I have some suggestions",
+        "Can I give you feedback?",
+        "Where do I leave a review?"
+      ],
+      "responses": [
+        "Yes, your feedback is very valuable! You can send your suggestions to feedback@example.com, or I can note it down for you if it's brief.",
+        "Absolutely! What kind of feedback would you like to provide? I'm always looking to improve.",
+        "We welcome all feedback! Please share your thoughts, and I'll make sure they are considered.",
+        "Thank you for wanting to give feedback! You can use our dedicated feedback form on our website or share it with me now.",
+        "Your input helps me get better! Please tell me what you think."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "human_handoff",
+      "patterns": [
+        "I want to talk to a human",
+        "Connect me with an agent",
+        "Can I speak to someone?",
+        "Human representative",
+        "Live agent",
+        "I need to speak to a person",
+        "Transfer me",
+        "Get me a human",
+        "Is there a human available?"
+      ],
+      "responses": [
+        "I understand. I can connect you to a human agent during our business hours. Please hold while I transfer you.",
+        "Certainly! Please wait a moment while I find an available representative for you.",
+        "If you'd prefer to speak with a person, I can arrange that. What is your primary concern so I can direct you to the right department?",
+        "Connecting you to a live agent now. Please be ready to briefly explain your issue again.",
+        "Our human agents are available from [START_TIME] to [END_TIME]. Would you like to be connected now, or would you prefer to leave a message?"
       ],
       "context": [""]
     }

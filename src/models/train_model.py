@@ -50,7 +50,7 @@ class ChatbotTrainer:
         
         # Compile model
         self.model.compile(
-            optimizer=Adam(learning_rate=0.001),
+            optimizer=Adam(learning_rate=0.01),
             loss='categorical_crossentropy',
             metrics=['accuracy']
         )
@@ -77,7 +77,7 @@ class ChatbotTrainer:
         )
         
         model_checkpoint = ModelCheckpoint(
-            'models/best_model.h5',
+            'src/models/saved_models/best_model.h5',
             monitor='val_accuracy',
             save_best_only=True,
             save_weights_only=False
@@ -111,8 +111,13 @@ class ChatbotTrainer:
         y_pred_classes = np.argmax(y_pred, axis=1)
         y_true_classes = np.argmax(y_test, axis=1)
         
-        # Classification report
-        class_report = classification_report(y_true_classes, y_pred_classes, target_names=classes)
+        # Classification report - handle cases where not all classes are predicted
+        unique_classes = sorted(list(set(y_true_classes) | set(y_pred_classes)))
+        class_names = [classes[i] for i in unique_classes]
+        class_report = classification_report(y_true_classes, y_pred_classes, 
+                                          target_names=class_names, 
+                                          labels=unique_classes, 
+                                          zero_division=0)
         logger.info(f"Classification Report:\\n{class_report}")
         
         # Confusion matrix
@@ -127,7 +132,7 @@ class ChatbotTrainer:
             'y_true': y_test
         }
     
-    def plot_training_history(self, save_path="models/training_history.png"):
+    def plot_training_history(self, save_path="src/models/saved_models/training_history.png"):
         """Plot training history."""
         if self.history is None:
             logger.warning("No training history available")
@@ -159,7 +164,7 @@ class ChatbotTrainer:
         
         logger.info(f"Training history plot saved to {save_path}")
     
-    def plot_confusion_matrix(self, cm, classes, save_path="models/confusion_matrix.png"):
+    def plot_confusion_matrix(self, cm, classes, save_path="src/models/saved_models/confusion_matrix.png"):
         """Plot confusion matrix."""
         plt.figure(figsize=(10, 8))
         sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
@@ -173,12 +178,12 @@ class ChatbotTrainer:
         
         logger.info(f"Confusion matrix plot saved to {save_path}")
     
-    def save_model(self, filepath="models/chatbot_model.h5"):
+    def save_model(self, filepath="src/models/saved_models/chatbot_model.h5"):
         """Save the trained model."""
         self.model.save(filepath)
         logger.info(f"Model saved to {filepath}")
     
-    def load_model(self, filepath="models/chatbot_model.h5"):
+    def load_model(self, filepath="src/models/saved_models/chatbot_model.h5"):
         """Load a trained model."""
         self.model = tf.keras.models.load_model(filepath)
         logger.info(f"Model loaded from {filepath}")
@@ -202,7 +207,7 @@ def main():
     """Main function to train the chatbot model."""
     # Load training data
     try:
-        with open("models/training_data.pkl", 'rb') as f:
+        with open("src/models/saved_models/training_data.pkl", 'rb') as f:
             data = pickle.load(f)
         
         x_train = data['x_train']
@@ -213,7 +218,7 @@ def main():
         y_test = data['y_test']
         
         # Load classes
-        with open("models/preprocessed_data_classes.pkl", 'rb') as f:
+        with open("src/models/saved_models/preprocessed_data_classes.pkl", 'rb') as f:
             classes = pickle.load(f)
         
         logger.info("Training data loaded successfully")
@@ -224,15 +229,15 @@ def main():
         
         # Run preprocessing
         preprocessor = DataPreprocessor()
-        words, classes, documents = preprocessor.prepare_training_data("data/Data/intents.json")
+        words, classes, documents = preprocessor.prepare_training_data("src/data/Data/intents.json")
         train_x, train_y = preprocessor.create_training_data()
         x_train, x_val, x_test, y_train, y_val, y_test = preprocessor.split_data(train_x, train_y)
         
         # Save preprocessed data
-        preprocessor.save_preprocessed_data("models/preprocessed_data")
+        preprocessor.save_preprocessed_data("src/models/saved_models/preprocessed_data")
         
         # Save training data
-        with open("models/training_data.pkl", 'wb') as f:
+        with open("src/models/saved_models/training_data.pkl", 'wb') as f:
             pickle.dump({
                 'x_train': x_train,
                 'x_val': x_val,
@@ -248,10 +253,10 @@ def main():
     trainer = ChatbotTrainer(input_dim, output_dim)
     
     # Build model
-    model = trainer.build_model(hidden_layers=[128, 64, 32], dropout_rate=0.5)
+    model = trainer.build_model(hidden_layers=[128, 64], dropout_rate=0.3)
     
     # Train model
-    history = trainer.train(x_train, y_train, x_val, y_val, epochs=100, batch_size=32)
+    history = trainer.train(x_train, y_train, x_val, y_val, epochs=200, batch_size=16)
     
     # Evaluate model
     evaluation_results = trainer.evaluate(x_test, y_test, classes)
@@ -264,11 +269,11 @@ def main():
     trainer.save_model()
     
     # Save training history
-    with open("models/training_history.pkl", 'wb') as f:
+    with open("src/models/saved_models/training_history.pkl", 'wb') as f:
         pickle.dump(history.history, f)
     
     # Save evaluation results
-    with open("models/evaluation_results.pkl", 'wb') as f:
+    with open("src/models/saved_models/evaluation_results.pkl", 'wb') as f:
         pickle.dump(evaluation_results, f)
     
     logger.info("Model training completed successfully!")

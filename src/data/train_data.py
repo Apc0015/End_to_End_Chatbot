@@ -6,6 +6,9 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras.utils import to_categorical
 import pickle
 from pathlib import Path
 
@@ -26,6 +29,10 @@ from nltk.tokenize import word_tokenize
 class DataPreprocessor:
     def __init__(self):
         self.stop_words = set(stopwords.words('english'))
+        self.words = []
+        self.classes = []
+        self.documents = []
+        self.label_encoder = LabelEncoder()
     
     def clean_text(self, text):
         # Convert to lowercase
@@ -39,9 +46,9 @@ class DataPreprocessor:
         
         # Tokenize and remove stopwords
         tokens = word_tokenize(text)
-        tokens = [token for token in tokens if token not in self.stop_words]
+        tokens = [token for token in tokens if token not in self.stop_words and token.isalpha()]
         
-        return ' '.join(tokens)
+        return tokens
     
     def prepare_training_data(self, intents_file=None):
         if intents_file is None:
@@ -52,15 +59,96 @@ class DataPreprocessor:
         with open(intents_file, 'r') as f:
             intents = json.load(f)
         
-        patterns = []
-        labels = []
+        words = []
+        classes = []
+        documents = []
         
         for intent in intents['intents']:
             for pattern in intent['patterns']:
-                patterns.append(self.clean_text(pattern))
-                labels.append(intent['tag'])
+                # Tokenize and clean the pattern
+                word_tokens = self.clean_text(pattern)
+                words.extend(word_tokens)
+                documents.append((word_tokens, intent['tag']))
+                
+                # Add to classes
+                if intent['tag'] not in classes:
+                    classes.append(intent['tag'])
         
-        return patterns, labels
+        # Remove duplicates and sort
+        words = sorted(list(set(words)))
+        classes = sorted(list(set(classes)))
+        
+        self.words = words
+        self.classes = classes
+        self.documents = documents
+        
+        return words, classes, documents
+    
+    def create_training_data(self):
+        # Create training data
+        training = []
+        output_empty = [0] * len(self.classes)
+        
+        for doc in self.documents:
+            bag = []
+            word_patterns = doc[0]
+            
+            # Create bag of words
+            for word in self.words:
+                bag.append(1) if word in word_patterns else bag.append(0)
+            
+            # Output is a '0' for each tag and '1' for current tag
+            output_row = list(output_empty)
+            output_row[self.classes.index(doc[1])] = 1
+            
+            training.append([bag, output_row])
+        
+        # Shuffle and convert to numpy array
+        np.random.shuffle(training)
+        training = np.array(training, dtype=object)
+        
+        # Split into X and y
+        train_x = np.array(list(training[:, 0]))
+        train_y = np.array(list(training[:, 1]))
+        
+        return train_x, train_y
+    
+    def split_data(self, train_x, train_y, test_size=0.2, val_size=0.1):
+        # First split: train + val, test
+        x_temp, x_test, y_temp, y_test = train_test_split(
+            train_x, train_y, test_size=test_size, random_state=42
+        )
+        
+        # Second split: train, val
+        val_size_adjusted = val_size / (1 - test_size)
+        x_train, x_val, y_train, y_val = train_test_split(
+            x_temp, y_temp, test_size=val_size_adjusted, random_state=42
+        )
+        
+        return x_train, x_val, x_test, y_train, y_val, y_test
+    
+    def save_preprocessed_data(self, base_path):
+        # Save words
+        with open(f"{base_path}_words.pkl", 'wb') as f:
+            pickle.dump(self.words, f)
+        
+        # Save classes
+        with open(f"{base_path}_classes.pkl", 'wb') as f:
+            pickle.dump(self.classes, f)
+        
+        print(f"Preprocessed data saved to {base_path}")
+    
+    def load_preprocessed_data(self, base_path):
+        # Load words
+        with open(f"{base_path}_words.pkl", 'rb') as f:
+            self.words = pickle.load(f)
+        
+        # Load classes
+        with open(f"{base_path}_classes.pkl", 'rb') as f:
+            self.classes = pickle.load(f)
+        
+        print(f"Preprocessed data loaded from {base_path}")
+        return self.words, self.classes
 
 def create_training_data():
     preprocessor = DataPreprocessor()
